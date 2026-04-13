@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:title" content="Duphilco Real Estate Inc — Premium Rentals in Makati & BGC">
+<meta property="og:description" content="Premium rental homes in Makati, BGC, and Metro Manila. Fully managed, expat-trusted properties for professionals since 2009.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_PH">
+<meta name="robots" content="index, follow">
+<title>Duphilco Real Estate Inc — Premium Rentals in Makati & BGC</title>
+<meta name="description" content="Duphilco Real Estate Inc — Premium rental homes in Makati, BGC, and Metro Manila. Fully managed, expat-trusted properties for professionals and expats since 2009.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23111111'/><polygon points='16,4 28,16 16,28 4,16' fill='none' stroke='%23C2A878' stroke-width='2.5'/><text x='16' y='21' text-anchor='middle' font-family='Georgia,serif' font-size='12' fill='%23C2A878'>D</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root {
+  --c-dark:#111111;--c-dark-2:#1C1C1C;--c-dark-3:#272727;
+  --c-gold:#C2A878;--c-gold-2:#D4BC96;--c-gold-dim:rgba(194,168,120,0.15);
+  --c-light:#F7F4EF;--c-light-2:#EDE9E2;--c-white:#FFFFFF;
+  --c-text:#2A2A2A;--c-text-2:#6A6A6A;--c-text-3:#9A9A9A;
+  --c-mid:#6A6A6A;
+  --c-border:rgba(194,168,120,0.2);--c-border-2:rgba(0,0,0,0.08);
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-body:'DM Sans',sans-serif;
+  --fw-light:300;--fw-reg:400;--fw-med:500;--fw-semi:600;
+  --transition:0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  --transition-fast:0.2s ease;
+  --nav-h:80px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;-webkit-overflow-scrolling:touch}
+body{font-family:var(--ff-body);font-weight:var(--fw-light);color:var(--c-text);background:var(--c-white);overflow-x:hidden;line-height:1.7}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{text-decoration:none;color:inherit;-webkit-tap-highlight-color:transparent}
+ul{list-style:none}
+button{border:none;background:none;cursor:pointer;font-family:inherit;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+input,textarea,select{font-family:var(--ff-body);font-weight:var(--fw-light);border:none;outline:none;background:none;font-size:16px}
+
+/* ── TYPOGRAPHY ─────────────────────────────────────────── */
+.t-hero{font-family:var(--ff-display);font-size:clamp(3rem,7vw,6.5rem);font-weight:400;line-height:1.08;letter-spacing:-0.01em}
+.t-h1{font-family:var(--ff-display);font-size:clamp(2.2rem,5vw,4.5rem);font-weight:400;line-height:1.12;letter-spacing:0}
+.t-h2{font-family:var(--ff-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:400;line-height:1.18}
+.t-h3{font-family:var(--ff-display);font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;line-height:1.22}
+.t-label{font-family:var(--ff-body);font-size:0.68rem;font-weight:var(--fw-semi);letter-spacing:0.2em;text-transform:uppercase}
+.t-body-lg{font-size:1.05rem;font-weight:var(--fw-light);line-height:1.8;color:var(--c-text-2)}
+
+/* ── UTILITY ────────────────────────────────────────────── */
+.container{max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem)}
+.section{padding:6rem 0}
+.section-tinted{background:var(--c-light)}
+.section-dark{background:var(--c-dark);color:var(--c-white)}
+.gold{color:var(--c-gold)}
+.section-label{color:var(--c-gold);display:block;margin-bottom:0.8rem}
+.section-head{margin-bottom:3.5rem}
+.section-sub{color:var(--c-mid);margin-top:0.8rem;font-size:0.95rem}
+
+/* ── SCROLL REVEAL ──────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.75s ease,transform 0.75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}.reveal-delay-4{transition-delay:0.4s}
+.reveal-delay-5{transition-delay:0.5s}
+
+/* ── PAGE ROUTER ────────────────────────────────────────── */
+.page{display:none}
+.page.active{display:block}
+
+/* ============================================================ NAVIGATION */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);display:flex;align-items:center;transition:background var(--transition),height var(--transition)}
+.nav.transparent{background:transparent}
+.nav.scrolled{background:rgba(17,17,17,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(194,168,120,0.15);height:68px}
+.nav-inner{width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;gap:2px;cursor:pointer}
+.nav-logo-name{font-family:var(--ff-display);font-size:1.4rem;font-weight:500;color:var(--c-white);letter-spacing:0.02em;line-height:1}
+.nav-logo-tagline{font-size:0.6rem;font-weight:var(--fw-med);letter-spacing:0.22em;text-transform:uppercase;color:var(--c-gold);line-height:1}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+.nav-links a{font-size:0.72rem;font-weight:var(--fw-med);letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.7);transition:color var(--transition-fast);position:relative;cursor:pointer}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--c-gold);transition:width var(--transition-fast)}
+.nav-links a:hover,.nav-links a.active{color:var(--c-white)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{padding:0.55rem 1.4rem;border:1px solid var(--c-gold);color:var(--c-gold)!important;transition:background var(--transition-fast),color var(--transition-fast)!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--c-gold);color:var(--c-dark)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:10px;margin-right:-10px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--c-white);transition:var(--transition-fast)}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+.mobile-nav{position:fixed;inset:0;background:var(--c-dark);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;opacity:0;pointer-events:none;transition:opacity var(--transition)}
+.mobile-nav.open{opacity:1;pointer-events:all}
+.mobile-nav a{font-family:var(--ff-display);font-size:2.2rem;font-weight:300;color:rgba(255,255,255,0.5);transition:color var(--transition-fast);cursor:pointer;padding:0.5rem 2rem;min-height:44px;display:flex;align-items:center}
+.mobile-nav a:hover{color:var(--c-white)}
+.mobile-nav .mobile-nav-cta{font-family:var(--ff-body);font-size:0.75rem;font-weight:var(--fw-med);letter-spacing:0.18em;text-transform:uppercase;color:var(--c-gold)!important;border:1px solid var(--c-gold);padding:0.9rem 2.5rem;margin-top:1rem}
+
+/* ============================================================ BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2.2rem;font-family:var(--ff-body);font-size:0.72rem;font-weight:var(--fw-med);letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;transition:all var(--transition-fast);white-space:nowrap}
+.btn-primary{background:var(--c-gold);color:var(--c-dark);border:1px solid var(--c-gold)}
+.btn-primary:hover{background:var(--c-gold-2);border-color:var(--c-gold-2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(194,168,120,0.3)}
+.btn-outline{background:transparent;color:var(--c-white);border:1px solid rgba(255,255,255,0.4)}
+.btn-outline:hover{border-color:var(--c-white);background:rgba(255,255,255,0.06);transform:translateY(-1px)}
+.btn-outline-dark{background:transparent;color:var(--c-dark);border:1px solid var(--c-dark)}
+.btn-outline-dark:hover{background:var(--c-dark);color:var(--c-white);transform:translateY(-1px)}
+.btn-lg{padding:1.1rem 2.8rem;font-size:0.76rem}
+
+/* ============================================================ HERO */
+.hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1800&q=90');background-size:cover;background-position:center 30%;transform:scale(1.06);animation:heroZoom 12s ease forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.92) 0%,rgba(10,10,10,0.55) 40%,rgba(10,10,10,0.25) 70%,rgba(10,10,10,0.1) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem) clamp(4rem,8vw,7rem)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.8rem;margin-bottom:1.5rem;animation:fadeUp 0.8s ease 0.3s both}
+.hero-eyebrow-line{width:32px;height:1px;background:var(--c-gold)}
+.hero-eyebrow-text{font-size:0.65rem;font-weight:var(--fw-semi);letter-spacing:0.22em;text-transform:uppercase;color:#ffffff}
+.hero-headline{max-width:820px;animation:fadeUp 0.8s ease 0.5s both;color:var(--c-white)}
+.hero-headline em{font-style:italic;color:var(--c-gold)}
+.hero-sub{margin-top:1.5rem;max-width:460px;font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.75;animation:fadeUp 0.8s ease 0.7s both}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:2.5rem;animation:fadeUp 0.8s ease 0.9s both}
+.hero-stats{position:absolute;right:clamp(1.5rem,4vw,4rem);bottom:clamp(4rem,8vw,7rem);display:flex;flex-direction:column;gap:1.5rem;z-index:2;animation:fadeLeft 0.8s ease 1.1s both}
+.hero-stat{text-align:right;border-right:1px solid rgba(194,168,120,0.4);padding-right:1.2rem}
+.hero-stat-num{font-family:var(--ff-display);font-size:1.9rem;font-weight:300;color:var(--c-white);line-height:1}
+.hero-stat-label{font-size:0.6rem;font-weight:var(--fw-med);letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:3px}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeIn 0.8s ease 1.5s both}
+.hero-scroll span{font-size:0.58rem;font-weight:var(--fw-med);letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35)}
+.hero-scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,rgba(255,255,255,0.35),transparent);animation:scrollDrop 2s ease-in-out infinite}
+@keyframes scrollDrop{0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(0.5);opacity:0.3}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ── MARQUEE ────────────────────────────────────────────── */
+.marquee-band{background:#B8923F;padding:0.9rem 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;animation:marquee 28s linear infinite}
+.marquee-item{display:inline-flex;align-items:center;gap:1.5rem;padding:0 2rem;font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#111111}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:#111111;opacity:0.6;flex-shrink:0}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============================================================ PROPERTY CARDS */
+.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:transparent}
+.prop-card{background:#ffffff;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.prop-card:hover .prop-view-btn{opacity:1;transform:translateY(0)}
+.prop-img{position:relative;width:100%;height:260px;overflow:hidden;background:#1e1e1a;display:block}
+.prop-img img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s ease}
+.prop-card:hover .prop-img img{transform:scale(1.06)}
+.prop-badge{position:absolute;top:1.2rem;left:1.2rem;padding:0.3rem 0.8rem;font-size:0.58rem;font-weight:var(--fw-semi);letter-spacing:0.18em;text-transform:uppercase;z-index:1}
+.prop-badge-avail{background:var(--c-gold);color:#111}
+.prop-view-btn{position:absolute;inset:0;background:rgba(17,17,17,0.4);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(8px);transition:all 0.35s ease;z-index:2}
+.prop-view-inner{display:flex;align-items:center;gap:0.5rem;color:#fff;font-size:0.7rem;font-weight:var(--fw-med);letter-spacing:0.2em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.6);padding:0.65rem 1.5rem}
+.prop-body{padding:1.8rem 1.8rem 2rem;background:#ffffff}
+.prop-location{font-size:0.62rem;font-weight:var(--fw-semi);letter-spacing:0.2em;text-transform:uppercase;color:var(--c-gold);margin-bottom:0.5rem;font-family:var(--ff-body)}
+.prop-name{font-family:var(--ff-display);font-size:1.15rem;font-weight:400;line-height:1.3;margin-bottom:0.6rem;color:#111111}
+.prop-specs{display:flex;gap:1.2rem;margin-bottom:1.2rem}
+.prop-spec{display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;color:#555555;font-weight:400;font-family:var(--ff-body)}
+.prop-spec-icon{color:var(--c-gold)}
+.prop-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;border-top:1px solid rgba(0,0,0,0.1)}
+.prop-price{font-family:var(--ff-display);font-size:1.2rem;font-weight:500;color:#111111}
+.prop-price span{font-size:0.65rem;font-weight:300;color:#888888;margin-left:2px;font-family:var(--ff-body)}
+.prop-link{font-size:0.62rem;font-weight:var(--fw-semi);letter-spacing:0.15em;text-transform:uppercase;color:var(--c-gold);font-family:var(--ff-body)}
+.prop-card-featured{grid-column:span 1}
+.prop-card-featured .prop-img{height:280px}
+
+/* ── FILTER BAR ─────────────────────────────────────────── */
+.filter-bar{background:var(--c-white);border-bottom:1px solid var(--c-border-2);padding:1.2rem 0;position:sticky;top:68px;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.06)}
+.filter-inner{display:flex;align-items:center;flex-wrap:wrap;gap:0.8rem;justify-content:space-between}
+.filter-pills{display:flex;gap:0.4rem;flex-wrap:wrap}
+.filter-pill{padding:0.45rem 1.1rem;font-size:0.68rem;font-weight:var(--fw-med);letter-spacing:0.1em;text-transform:uppercase;border:1px solid var(--c-border-2);color:var(--c-text-2);cursor:pointer;transition:all var(--transition-fast);background:var(--c-white)}
+.filter-pill:hover,.filter-pill.active{background:var(--c-dark);color:var(--c-white);border-color:var(--c-dark)}
+.filter-selects{display:flex;gap:0.8rem}
+.filter-select{padding:0.45rem 2rem 0.45rem 1rem;border:1px solid var(--c-border-2);font-size:0.68rem;font-weight:var(--fw-med);color:var(--c-text-2);background:var(--c-white);cursor:pointer;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%239A9A9A'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+.filter-count{font-size:0.72rem;color:var(--c-text-3);white-space:nowrap}
+.all-props-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:transparent}
+.prop-card[data-hidden="true"]{display:none}
+.prop-card{background:#ffffff;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,0.08);outline:1px solid #d0cdc8}
+
+/* ── SPLIT SECTION ──────────────────────────────────────── */
+.split-section{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.split-img{position:relative;overflow:hidden}
+.split-content{padding:clamp(3rem,6vw,6rem);display:flex;flex-direction:column;justify-content:center}
+.split-content.dark{background:var(--c-dark);color:var(--c-white)}
+.split-content.dark .t-label{color:var(--c-gold)}
+.checklist{margin-top:2rem;display:flex;flex-direction:column;gap:1rem}
+.checklist-item{display:flex;align-items:flex-start;gap:1rem}
+.checklist-icon{width:22px;height:22px;border:1px solid var(--c-gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.checklist-icon::before{content:'';width:8px;height:8px;background:var(--c-gold);clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0%,43% 62%)}
+.checklist-text{font-size:0.9rem;color:rgba(255,255,255,0.7);line-height:1.6}
+
+/* ── WHY GRID ───────────────────────────────────────────── */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,0.08);margin-top:4rem}
+.why-item{padding:2.5rem 2rem;border-right:1px solid rgba(255,255,255,0.08);transition:background var(--transition-fast)}
+.why-item:last-child{border-right:none}
+.why-item:hover{background:rgba(255,255,255,0.03)}
+.why-num{font-family:var(--ff-display);font-size:0.8rem;color:var(--c-gold);margin-bottom:1.2rem;display:block}
+.why-title{font-family:var(--ff-display);font-size:1.1rem;font-weight:400;color:var(--c-white);margin-bottom:0.6rem}
+.why-text{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.7}
+
+/* ── SERVICES GRID ──────────────────────────────────────── */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--c-light-2);margin-top:3rem}
+.service-card{background:var(--c-white);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background var(--transition-fast)}
+.service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--c-gold);transition:width 0.4s ease}
+.service-card:hover::before{width:100%}
+.service-card:hover{background:var(--c-light)}
+.service-num{font-family:var(--ff-display);font-size:2.5rem;font-weight:300;color:rgba(0,0,0,0.06);line-height:1;margin-bottom:1.2rem;user-select:none}
+.service-title{font-family:var(--ff-display);font-size:1.15rem;font-weight:400;color:var(--c-dark);margin-bottom:0.7rem}
+.service-text{font-size:0.82rem;color:var(--c-text-2);line-height:1.75}
+
+/* ── TESTIMONIALS ───────────────────────────────────────── */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.testimonial-card{background:var(--c-white);border:1px solid var(--c-border-2);padding:2.5rem;position:relative}
+.testimonial-card::before{content:'\201C';font-family:var(--ff-display);font-size:5rem;font-weight:300;color:var(--c-gold);opacity:0.25;position:absolute;top:1rem;left:1.8rem;line-height:1}
+.testimonial-stars{display:flex;gap:2px;margin-bottom:1.2rem}
+.testimonial-stars span{color:var(--c-gold);font-size:0.75rem}
+.testimonial-text{font-size:0.88rem;color:var(--c-text-2);line-height:1.8;margin-bottom:1.5rem;position:relative;z-index:1}
+.testimonial-author{display:flex;align-items:center;gap:0.8rem;border-top:1px solid var(--c-border-2);padding-top:1.2rem}
+.testimonial-avatar{width:42px;height:42px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.testimonial-name{font-size:0.82rem;font-weight:var(--fw-med);color:var(--c-dark)}
+.testimonial-role{font-size:0.72rem;color:var(--c-text-3);margin-top:1px}
+
+/* ── CTA BAND ───────────────────────────────────────────── */
+.cta-band{background:var(--c-dark-2);padding:6rem 0;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(194,168,120,0.025) 0px,rgba(194,168,120,0.025) 1px,transparent 1px,transparent 80px),repeating-linear-gradient(0deg,rgba(194,168,120,0.025) 0px,rgba(194,168,120,0.025) 1px,transparent 1px,transparent 80px)}
+.cta-band-inner{position:relative;z-index:1;text-align:center;max-width:680px;margin:0 auto;padding:0 2rem}
+.cta-band-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+.footer{background:var(--c-dark);color:rgba(255,255,255,0.5);padding:5rem 0 2.5rem}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand-name{font-family:var(--ff-display);font-size:1.5rem;font-weight:500;color:var(--c-white);letter-spacing:0.02em;margin-bottom:0.3rem}
+.footer-brand-tag{font-size:0.6rem;font-weight:var(--fw-med);letter-spacing:0.22em;text-transform:uppercase;color:var(--c-gold);margin-bottom:1.2rem}
+.footer-brand-text{font-size:0.82rem;line-height:1.8;max-width:260px}
+.footer-heading{font-size:0.62rem;font-weight:var(--fw-med);letter-spacing:0.2em;text-transform:uppercase;color:var(--c-gold);margin-bottom:1.5rem}
+.footer-links{display:flex;flex-direction:column;gap:0.7rem}
+.footer-links a{font-size:0.82rem;color:rgba(255,255,255,0.45);transition:color var(--transition-fast);cursor:pointer}
+.footer-links a:hover{color:var(--c-white)}
+.footer-contact-item{display:flex;gap:0.8rem;margin-bottom:0.8rem;font-size:0.82rem;line-height:1.5}
+.footer-contact-icon{color:var(--c-gold);flex-shrink:0;margin-top:2px}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2.5rem;font-size:0.7rem}
+.footer-socials{display:flex;gap:1rem}
+.footer-socials a{width:34px;height:34px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:rgba(255,255,255,0.4);transition:all var(--transition-fast)}
+.footer-socials a:hover{border-color:var(--c-gold);color:var(--c-gold)}
+
+/* ── WHATSAPP FLOAT ─────────────────────────────────────── */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:900;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);font-size:1.4rem;transition:transform var(--transition-fast)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-pulse{position:absolute;inset:0;border-radius:50%;background:rgba(37,211,102,0.4);animation:waPulse 2.5s ease infinite}
+@keyframes waPulse{0%{transform:scale(1);opacity:0.8}100%{transform:scale(2.2);opacity:0}}
+
+/* ── MODAL ──────────────────────────────────────────────── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity 0.35s ease}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--c-white);width:100%;max-width:560px;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(24px) scale(0.98);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+.modal-overlay.open .modal{transform:translateY(0) scale(1)}
+.modal-header{background:var(--c-dark);padding:2rem 2.5rem;position:relative}
+.modal-close{position:absolute;top:1.5rem;right:1.5rem;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);font-size:1rem;cursor:pointer;transition:all var(--transition-fast)}
+.modal-close:hover{border-color:var(--c-gold);color:var(--c-gold)}
+.modal-title{font-family:var(--ff-display);font-size:1.5rem;font-weight:300;color:var(--c-white);margin-bottom:0.2rem}
+.modal-sub{font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.05em}
+.modal-body{padding:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.form-field{margin-bottom:1.4rem}
+.form-label{display:block;font-size:0.62rem;font-weight:var(--fw-med);letter-spacing:0.2em;text-transform:uppercase;color:var(--c-text-3);margin-bottom:0.5rem}
+.form-input{width:100%;padding:0.9rem 0;border-bottom:1px solid var(--c-light-2);font-size:0.9rem;color:var(--c-dark);transition:border-color var(--transition-fast)}
+.form-input:focus{border-color:var(--c-gold)}
+.form-input::placeholder{color:var(--c-text-3)}
+textarea.form-input{resize:none;height:80px}
+select.form-input{-webkit-appearance:none;cursor:pointer}
+.modal-footer{padding:0 2.5rem 2.5rem}
+.modal-footer .btn{width:100%;justify-content:center}
+.form-success{display:none;text-align:center;padding:2rem}
+.form-success.show{display:block}
+.form-success-icon{width:56px;height:56px;border:1px solid var(--c-gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-size:1.3rem;color:var(--c-gold)}
+.form-success h3{font-family:var(--ff-display);font-size:1.4rem;font-weight:300;margin-bottom:0.5rem}
+.form-success p{font-size:0.85rem;color:var(--c-text-2)}
+
+/* ── PAGE HEADER ────────────────────────────────────────── */
+.page-header{position:relative;padding:calc(var(--nav-h) + 5rem) 0 5rem;background:var(--c-dark);overflow:hidden}
+.page-header-bg{position:absolute;inset:0;opacity:0.2;background-size:cover;background-position:center}
+.page-header-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--c-dark) 40%,transparent)}
+.page-header-content{position:relative;z-index:2}
+.page-header .t-h1{color:var(--c-white)}
+.page-header p{color:rgba(255,255,255,0.5);margin-top:0.8rem;font-size:1rem}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;font-size:0.7rem;color:rgba(255,255,255,0.35)}
+.breadcrumb a,.breadcrumb span{color:rgba(255,255,255,0.35);cursor:pointer}
+.breadcrumb a:hover{color:var(--c-gold)}
+.breadcrumb span.sep{color:rgba(255,255,255,0.2)}
+
+/* ── ABOUT PAGE ─────────────────────────────────────────── */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;padding:7rem 0}
+.story-image-wrap{position:relative}
+.story-img{width:100%;height:560px;object-fit:cover;display:block}
+.story-badge{position:absolute;bottom:-2rem;left:-2rem;background:var(--c-gold);color:#fff;padding:1.8rem 2rem;text-align:center;min-width:130px}
+.story-badge-num{font-family:var(--ff-display);font-size:2.6rem;font-weight:700;line-height:1}
+.story-badge-text{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.4rem;line-height:1.4}
+.story-lead{font-size:1.1rem;line-height:1.8;color:var(--c-dark);margin-bottom:1.2rem;font-weight:500}
+.story-content p{color:var(--c-mid);line-height:1.85;margin-bottom:1rem}
+.story-checkmarks{margin-top:2.5rem;display:flex;flex-direction:column;gap:0.9rem}
+.story-check{display:flex;align-items:flex-start;gap:0.9rem}
+.story-check-icon{width:22px;height:22px;border-radius:50%;background:var(--c-gold);color:#fff;font-size:0.7rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem}
+.story-check span{color:var(--c-dark);font-size:0.95rem;line-height:1.5}
+.numbers-band{background:var(--c-dark);padding:5rem 0}
+.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.number-item{text-align:center;padding:2rem;border-right:1px solid rgba(255,255,255,0.08)}
+.number-item:last-child{border-right:none}
+.number-val{font-family:var(--ff-display);font-size:clamp(2.8rem,5vw,4rem);font-weight:700;color:var(--c-gold);line-height:1;margin-bottom:0.6rem}
+.number-label{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5)}
+.mvv-section{padding:7rem 0;background:var(--c-light)}
+.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--c-border);margin-top:3rem}
+.mvv-card{padding:3.5rem;border-right:1px solid var(--c-border);transition:background 0.3s}
+.mvv-card:last-child{border-right:none}
+.mvv-card:hover{background:#fff}
+.mvv-icon{font-size:1.8rem;color:var(--c-gold);margin-bottom:1.5rem}
+.mvv-title{font-family:var(--ff-display);font-size:1.4rem;color:var(--c-dark);margin-bottom:1.2rem}
+.mvv-card p{color:var(--c-mid);line-height:1.8;font-size:0.95rem}
+.mvv-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.7rem}
+.mvv-list li{color:var(--c-mid);font-size:0.95rem;padding-left:0;position:relative}
+.mvv-list li::before{content:'';display:none}
+.team-section{padding:7rem 0}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem}
+.team-card{overflow:hidden}
+.team-photo-wrap{position:relative;overflow:hidden}
+.team-avatar{width:100%;height:320px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 100%);position:relative}
+.team-avatar::before{content:'';position:absolute;inset:0;border:1px solid rgba(194,168,120,0.2)}
+.team-initials{width:110px;height:110px;border-radius:50%;border:1.5px solid var(--c-gold);display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-size:2rem;font-weight:400;color:var(--c-gold);letter-spacing:0.05em;background:rgba(194,168,120,0.07)}
+.team-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,17,17,0.5) 0%,transparent 60%)}
+.team-info{padding:1.4rem 0 0}
+.team-name{font-family:var(--ff-display);font-size:1.2rem;color:var(--c-dark);margin-bottom:0.3rem}
+.team-role{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-gold);margin-bottom:0.9rem}
+.team-bio{font-size:0.88rem;color:var(--c-mid);line-height:1.7}
+
+/* ── SERVICES PAGE ──────────────────────────────────────── */
+.services-intro{padding:6rem 0 4rem}
+.services-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end}
+.service-block{padding:6rem 0;border-bottom:1px solid var(--c-border)}
+.service-block-alt{background:var(--c-light)}
+.service-block-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.service-block-img-wrap{position:relative;overflow:hidden}
+.service-block-img{width:100%;height:480px;object-fit:cover;display:block;transition:transform 0.7s ease}
+.service-block:hover .service-block-img{transform:scale(1.02)}
+.service-block-num{position:absolute;top:-0.5rem;right:-1rem;font-family:var(--ff-display);font-size:8rem;font-weight:800;color:rgba(0,0,0,0.06);line-height:1;pointer-events:none;user-select:none}
+.service-block-content p{color:var(--c-mid);line-height:1.85;margin-bottom:1.5rem}
+.service-features{list-style:none;padding:0;margin:0 0 0.5rem;display:flex;flex-direction:column;gap:0.7rem}
+.service-features li{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.95rem;color:var(--c-dark)}
+.service-features li::before{content:'✓';color:var(--c-gold);font-size:0.8rem;margin-top:0.15rem;flex-shrink:0}
+.process-section{background:var(--c-dark);padding:7rem 0}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4rem;position:relative}
+.process-steps::before{content:'';position:absolute;top:2.5rem;left:10%;right:10%;height:1px;background:rgba(194,168,120,0.3);z-index:0}
+.process-step{text-align:center;padding:0 2rem;position:relative;z-index:1}
+.process-step-num{font-family:var(--ff-display);font-size:0.75rem;letter-spacing:0.15em;color:var(--c-gold);margin-bottom:0.8rem}
+.process-icon{width:52px;height:52px;border:1px solid rgba(194,168,120,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.2rem;color:var(--c-gold);background:var(--c-dark)}
+.process-title{font-family:var(--ff-display);font-size:1.1rem;color:#fff;margin-bottom:0.9rem}
+.process-desc{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.75}
+.faq-section{padding:7rem 0;background:var(--c-light)}
+.faq-inner{display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--c-border)}
+.faq-question{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;cursor:pointer;padding:1.4rem 0;text-align:left;font-size:1rem;font-weight:500;color:var(--c-dark);gap:1.5rem;transition:color 0.2s}
+.faq-question:hover,.faq-question.open{color:var(--c-gold)}
+.faq-arrow{font-size:1.2rem;color:var(--c-gold);flex-shrink:0;transition:transform 0.3s;display:inline-block}
+.faq-question.open .faq-arrow{transform:rotate(180deg)}
+.faq-answer{display:none;padding-bottom:1.4rem}
+.faq-answer.open{display:block}
+.faq-answer p{font-size:0.95rem;color:var(--c-mid);line-height:1.8}
+
+/* ── CONTACT PAGE ───────────────────────────────────────── */
+.contact-section{padding:7rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.contact-submit{width:100%;margin-top:0.5rem}
+.form-textarea{min-height:130px;resize:vertical}
+.contact-info-inner{background:var(--c-dark);padding:3.5rem;color:#fff;position:sticky;top:calc(var(--nav-h) + 2rem)}
+.contact-info-section{margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.08)}
+.contact-info-section:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.contact-info-title{font-family:var(--ff-display);font-size:1.5rem;color:#fff;margin:0.5rem 0 1.2rem}
+.contact-address{font-style:normal;color:rgba(255,255,255,0.6);line-height:1.8;font-size:0.95rem}
+.contact-info-items{display:flex;flex-direction:column;gap:1rem}
+.contact-info-item{display:flex;align-items:flex-start;gap:1rem;color:#fff;text-decoration:none;transition:opacity 0.2s}
+.contact-info-item:hover{opacity:0.75}
+.contact-info-icon{width:36px;height:36px;border:1px solid rgba(194,168,120,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--c-gold);font-size:0.85rem}
+.contact-info-meta{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.2rem}
+.contact-info-val{font-size:0.95rem;color:#fff}
+.hours-grid{display:flex;flex-direction:column;gap:0.6rem}
+.hours-row{display:flex;justify-content:space-between;font-size:0.88rem;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.hours-day{color:rgba(255,255,255,0.55)}
+.hours-time{color:rgba(255,255,255,0.85)}
+.hours-highlight .hours-day,.hours-highlight .hours-time{color:var(--c-gold)}
+.contact-cta-row{margin-top:2.5rem;display:flex;gap:1rem}
+.contact-wa-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:0.6rem;background:#25D366;color:#fff;padding:0.85rem 1.2rem;font-size:0.9rem;font-weight:600;text-decoration:none;transition:background 0.2s}
+.contact-wa-btn:hover{background:#1db954}
+.contact-email-btn{flex:1;display:flex;align-items:center;justify-content:center;border:1px solid rgba(194,168,120,0.4);color:var(--c-gold);padding:0.85rem 1.2rem;font-size:0.9rem;font-weight:600;text-decoration:none;transition:all 0.2s}
+.contact-email-btn:hover{background:rgba(194,168,120,0.1)}
+.map-label{background:var(--c-dark);padding:1.2rem 0}
+.map-label-inner{display:flex;align-items:center;gap:1rem;color:rgba(255,255,255,0.6);font-size:0.88rem}
+.map-directions-btn{margin-left:auto;color:var(--c-gold);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;transition:opacity 0.2s}
+.map-directions-btn:hover{opacity:0.7}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+/* ── TABLET (768px–1100px) ───────────────────────────────── */
+@media(max-width:1100px){
+  .prop-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:3rem}
+  .numbers-grid{grid-template-columns:repeat(2,1fr)}
+  .number-item{border-right:none}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .mvv-grid{grid-template-columns:1fr}
+  .mvv-card{border-right:none;border-bottom:1px solid var(--c-border)}
+  .mvv-card:last-child{border-bottom:none}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-info-inner{position:static}
+  .services-intro-grid{grid-template-columns:1fr;gap:2rem}
+  .service-block-grid{grid-template-columns:1fr;gap:2rem}
+  .service-block-img{height:320px}
+  .service-block-alt .service-block-grid>*:first-child{order:2}
+  .service-block-alt .service-block-grid>*:last-child{order:1}
+  .faq-inner{grid-template-columns:1fr;gap:2rem}
+  .split-section{grid-template-columns:1fr}
+  .split-img{height:320px}
+  .story-grid{grid-template-columns:1fr;padding:4rem 0}
+  .story-badge{left:1rem;bottom:-1rem}
+  .story-img{height:380px}
+  .all-props-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ── MOBILE (max 767px) ─────────────────────────────────── */
+@media(max-width:767px){
+  :root{--nav-h:60px}
+
+  /* Nav */
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-logo-name{font-size:1.15rem}
+  .nav-logo-tagline{font-size:0.52rem}
+
+  /* Typography scale down */
+  .t-hero{font-size:clamp(2.4rem,10vw,3.2rem)}
+  .t-h1{font-size:clamp(1.9rem,8vw,2.6rem)}
+  .t-h2{font-size:clamp(1.6rem,6vw,2.2rem)}
+  .t-h3{font-size:clamp(1.2rem,5vw,1.6rem)}
+
+  /* Sections */
+  .section{padding:4rem 0}
+  .section-head{margin-bottom:2rem}
+
+  /* Hero */
+  .hero{min-height:100svh;align-items:flex-end}
+  .hero-content{padding:0 1.5rem 3.5rem}
+  .hero-stats{display:none}
+  .hero-scroll{display:none}
+  .hero-actions{flex-direction:column;gap:0.8rem}
+  .hero-actions .btn{width:100%;justify-content:center}
+
+  /* Marquee */
+  .marquee-item{font-size:0.55rem;padding:0 1.2rem}
+
+  /* Prop grid — single column */
+  .prop-grid{grid-template-columns:1fr}
+  .prop-card-featured{grid-column:span 1}
+  .prop-card-featured .prop-img{height:260px}
+  .prop-img{height:220px}
+  .all-props-grid{grid-template-columns:1fr}
+  .prop-body{padding:1.2rem 1.2rem 1.4rem}
+
+  /* Filter bar */
+  .filter-inner{flex-direction:column;align-items:flex-start;gap:0.8rem}
+  .filter-pills{flex-wrap:wrap;gap:0.4rem}
+  .filter-selects{flex-direction:column;width:100%}
+  .filter-select{width:100%}
+
+  /* Split section */
+  .split-section{grid-template-columns:1fr}
+  .split-img{height:260px}
+  .split-content{padding:2.5rem 1.5rem}
+
+  /* Why grid */
+  .why-grid{grid-template-columns:1fr}
+  .why-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.06);padding:2rem 1.5rem}
+  .why-item:last-child{border-bottom:none}
+
+  /* Services grid */
+  .services-grid{grid-template-columns:1fr}
+  .service-card{padding:2rem 1.5rem}
+
+  /* Testimonials */
+  .testimonials-grid{grid-template-columns:1fr}
+
+  /* CTA band */
+  .cta-band{padding:4rem 0}
+  .cta-band-inner{padding:0 1.5rem}
+  .cta-band-btns{flex-direction:column;gap:0.8rem}
+  .cta-band-btns .btn{width:100%;justify-content:center}
+
+  /* Footer */
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+
+  /* Forms */
+  .form-row{grid-template-columns:1fr}
+  .modal{max-height:95vh}
+  .modal-body{padding:1.5rem}
+  .modal-footer{padding:0 1.5rem 1.5rem}
+
+  /* Page headers */
+  .page-header{padding:calc(var(--nav-h) + 3rem) 0 3rem}
+
+  /* Numbers band */
+  .numbers-grid{grid-template-columns:repeat(2,1fr)}
+  .number-item{padding:1.5rem 1rem;border-right:none;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .number-item:nth-child(odd){border-right:1px solid rgba(255,255,255,0.06)}
+  .number-item:nth-last-child(-n+2){border-bottom:none}
+
+  /* MVV */
+  .mvv-grid{grid-template-columns:1fr}
+  .mvv-card{padding:2rem 1.5rem;border-right:none;border-bottom:1px solid var(--c-border)}
+  .mvv-card:last-child{border-bottom:none}
+
+  /* Team */
+  .team-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+  .team-avatar{height:200px}
+  .team-initials{width:80px;height:80px;font-size:1.4rem}
+
+  /* Story section */
+  .story-grid{grid-template-columns:1fr;gap:3rem;padding:4rem 0}
+  .story-img{height:280px}
+  .story-badge{left:1rem;bottom:-1.5rem;padding:1.2rem 1.4rem}
+  .story-badge-num{font-size:2rem}
+
+  /* Services page */
+  .services-intro{padding:3rem 0 2rem}
+  .services-intro-grid{grid-template-columns:1fr;gap:1.5rem}
+  .service-block{padding:3.5rem 0}
+  .service-block-grid{grid-template-columns:1fr;gap:2rem}
+  .service-block-img{height:240px}
+  .service-block-alt .service-block-grid>*:first-child{order:2}
+  .service-block-alt .service-block-grid>*:last-child{order:1}
+  .process-section{padding:4rem 0}
+  .process-steps{grid-template-columns:1fr;gap:2.5rem;margin-top:2.5rem}
+  .process-steps::before{display:none}
+  .faq-section{padding:4rem 0}
+  .faq-inner{grid-template-columns:1fr;gap:2rem}
+  .faq-question{font-size:0.9rem;padding:1.2rem 0}
+
+  /* Contact page */
+  .contact-section{padding:4rem 0}
+  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .contact-info-inner{padding:2rem;position:static}
+  .contact-cta-row{flex-direction:column}
+  .contact-wa-btn,.contact-email-btn{width:100%;justify-content:center}
+  .hours-row{font-size:0.82rem}
+
+  /* Map */
+  .map-label-inner{flex-wrap:wrap;gap:0.5rem}
+  .map-directions-btn{margin-left:0}
+
+  /* Buttons */
+  .btn-lg{padding:1rem 2rem;font-size:0.72rem}
+}
+
+/* ── SMALL PHONES (max 390px) ───────────────────────────── */
+@media(max-width:390px){
+  .team-grid{grid-template-columns:1fr}
+  .numbers-grid{grid-template-columns:1fr}
+  .number-item{border-right:none!important}
+  .prop-specs{gap:0.7rem;flex-wrap:wrap}
+  .hero-eyebrow-text{font-size:0.55rem;letter-spacing:0.15em}
+}
+
+@media print {
+  .nav,.mobile-nav,.modal-overlay,.filter-bar,.cta-band,.footer-socials { display:none!important; }
+  .page { display:block!important; }
+  body { background:#fff; color:#111; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav transparent" id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-logo" data-nav="home">
+      <span class="nav-logo-name">Duphilco</span>
+      <span class="nav-logo-tagline">Real Estate Inc.</span>
+    </div>
+    <div class="nav-links">
+      <a data-nav="home" class="active">Home</a>
+      <a data-nav="properties">Properties</a>
+      <a data-nav="services">Services</a>
+      <a data-nav="about">About</a>
+      <a data-nav="contact">Contact</a>
+      <a class="nav-cta" data-modal="booking">Book a Viewing</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a data-nav="home">Home</a>
+  <a data-nav="properties">Properties</a>
+  <a data-nav="services">Services</a>
+  <a data-nav="about">About</a>
+  <a data-nav="contact">Contact</a>
+  <a class="mobile-nav-cta" data-modal="booking">Book a Viewing</a>
+</nav>
+
+<!-- ══════════════════ PAGE: HOME ══════════════════ -->
+<div class="page active" id="page-home">
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span class="hero-eyebrow-text">Makati · BGC · Taguig · Metro Manila</span>
+    </div>
+    <h1 class="t-hero hero-headline">Premium Homes<br>for <em>Discerning</em><br>Professionals</h1>
+    <p class="hero-sub">Fully managed, secure, and meticulously maintained residences — trusted by expats and professionals across Metro Manila since 2009.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" data-nav="properties">Browse Properties</a>
+      <a class="btn btn-outline btn-lg" data-modal="booking">Book a Viewing</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-num">250+</div><div class="hero-stat-label">Premium Units</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">15+</div><div class="hero-stat-label">Years Experience</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">98%</div><div class="hero-stat-label">Client Satisfaction</div></div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+</section>
+
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span class="marquee-item">Makati CBD<span class="marquee-dot"></span></span>
+    <span class="marquee-item">BGC Taguig<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Mandaluyong<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Expat Trusted<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Fully Managed<span class="marquee-dot"></span></span>
+    <span class="marquee-item">24/7 Support<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Premium Living<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Makati CBD<span class="marquee-dot"></span></span>
+    <span class="marquee-item">BGC Taguig<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Mandaluyong<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Expat Trusted<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Fully Managed<span class="marquee-dot"></span></span>
+    <span class="marquee-item">24/7 Support<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Premium Living<span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="t-label section-label">Featured Listings</span>
+      <h2 class="t-h2">Handpicked Properties</h2>
+    </div>
+    <div class="prop-grid">
+      <a class="prop-card prop-card-featured reveal" data-nav="properties" style="cursor:pointer">
+        <div class="prop-img"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=900&q=85" alt="BGC 2BR"><span class="prop-badge prop-badge-avail">Available Now</span><div class="prop-view-btn"><div class="prop-view-inner">View Details →</div></div></div>
+        <div class="prop-body"><p class="prop-location">Bonifacio Global City, Taguig</p><h3 class="prop-name">The Residences at BGC — 2BR Luxury Unit</h3><div class="prop-specs"><span class="prop-spec"><span class="prop-spec-icon">⚏</span> 2 Beds</span><span class="prop-spec"><span class="prop-spec-icon">⚗</span> 2 Baths</span><span class="prop-spec"><span class="prop-spec-icon">⬡</span> 78 sqm</span></div><div class="prop-footer"><span class="prop-price">₱90,000 <span>/month</span></span><span class="prop-link">View Details →</span></div></div>
+      </a>
+      <a class="prop-card reveal reveal-delay-1" data-nav="properties" style="cursor:pointer">
+        <div class="prop-img"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=85" alt="Salcedo Studio"><span class="prop-badge prop-badge-avail">Available Now</span><div class="prop-view-btn"><div class="prop-view-inner">View Details →</div></div></div>
+        <div class="prop-body"><p class="prop-location">Salcedo Village, Makati</p><h3 class="prop-name">Salcedo Premier Studio</h3><div class="prop-specs"><span class="prop-spec"><span class="prop-spec-icon">⚏</span> Studio</span><span class="prop-spec"><span class="prop-spec-icon">⚗</span> 1 Bath</span><span class="prop-spec"><span class="prop-spec-icon">⬡</span> 42 sqm</span></div><div class="prop-footer"><span class="prop-price">₱55,000 <span>/month</span></span><span class="prop-link">View Details →</span></div></div>
+      </a>
+      <a class="prop-card reveal reveal-delay-2" data-nav="properties" style="cursor:pointer">
+        <div class="prop-img"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=85" alt="Urdaneta 3BR"><span class="prop-badge prop-badge-avail">Available Now</span><div class="prop-view-btn"><div class="prop-view-inner">View Details →</div></div></div>
+        <div class="prop-body"><p class="prop-location">Urdaneta Village, Makati</p><h3 class="prop-name">Urdaneta Executive 3-Bedroom</h3><div class="prop-specs"><span class="prop-spec"><span class="prop-spec-icon">⚏</span> 3 Beds</span><span class="prop-spec"><span class="prop-spec-icon">⚗</span> 3 Baths</span><span class="prop-spec"><span class="prop-spec-icon">⬡</span> 145 sqm</span></div><div class="prop-footer"><span class="prop-price">₱160,000 <span>/month</span></span><span class="prop-link">View Details →</span></div></div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <a class="btn btn-outline-dark btn-lg" data-nav="properties">View All Properties</a>
+    </div>
+  </div>
+</section>
+
+<div class="split-section">
+  <div class="split-img reveal"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=85" alt="Makati Skyline" style="object-position:center 40%"></div>
+  <div class="split-content dark">
+    <div class="reveal">
+      <span class="t-label" style="color:var(--c-gold);margin-bottom:0.8rem;display:block">Why Duphilco</span>
+      <h2 class="t-h2" style="color:var(--c-white);margin:0.8rem 0 1rem">The Standard for<br>Expat Living in Manila</h2>
+      <p style="color:rgba(255,255,255,0.55);font-size:1rem;line-height:1.8;margin-bottom:0.5rem">We go beyond just renting properties — we curate living experiences.</p>
+      <ul class="checklist">
+        <li class="checklist-item"><span class="checklist-icon"></span><span class="checklist-text">Prime locations in Makati, BGC, and Mandaluyong with walking distance to embassies, business hubs, and international schools</span></li>
+        <li class="checklist-item"><span class="checklist-icon"></span><span class="checklist-text">24-hour dedicated maintenance team with guaranteed same-day response for urgent concerns</span></li>
+        <li class="checklist-item"><span class="checklist-icon"></span><span class="checklist-text">Transparent lease agreements with expat-friendly terms — no hidden fees, no surprises</span></li>
+        <li class="checklist-item"><span class="checklist-icon"></span><span class="checklist-text">Bilingual property management team fluent in English, Japanese, Korean, and Filipino</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="section-dark section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0" class="reveal">
+      <span class="t-label" style="color:var(--c-gold);margin-bottom:0.8rem;display:block">Our Commitment</span>
+      <h2 class="t-h2" style="color:var(--c-white)">Built on Trust.<br>Driven by Excellence.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><span class="why-num">01</span><h3 class="why-title">Prime Locations</h3><p class="why-text">Curated properties in Makati's top villages, BGC's financial district, and premier residential corridors across Metro Manila.</p></div>
+      <div class="why-item reveal reveal-delay-1"><span class="why-num">02</span><h3 class="why-title">24-Hour Maintenance</h3><p class="why-text">Our in-house team responds to every maintenance request within 24 hours — because your comfort cannot wait.</p></div>
+      <div class="why-item reveal reveal-delay-2"><span class="why-num">03</span><h3 class="why-title">Secure &amp; Managed</h3><p class="why-text">All properties are in secured buildings with professional management. We vet all units before listing them.</p></div>
+      <div class="why-item reveal reveal-delay-3"><span class="why-num">04</span><h3 class="why-title">Expat Specialists</h3><p class="why-text">We've helped over 1,000 expat families relocate to Manila with confidence, comfort, and peace of mind.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tinted">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0" class="reveal section-head">
+      <div><span class="t-label section-label">What We Offer</span><h2 class="t-h2">Our Services</h2></div>
+      <a class="btn btn-outline-dark" data-nav="services" style="flex-shrink:0">All Services →</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-num">01</div><h3 class="service-title">Condo &amp; Apartment Rentals</h3><p class="service-text">From executive studios to 4-bedroom luxury condos — in BGC, Makati, and surrounding prime areas.</p></div>
+      <div class="service-card reveal reveal-delay-1"><div class="service-num">02</div><h3 class="service-title">House &amp; Lot Leasing</h3><p class="service-text">Spacious, semi-furnished homes in gated communities ideal for families relocating to Metro Manila.</p></div>
+      <div class="service-card reveal reveal-delay-2"><div class="service-num">03</div><h3 class="service-title">Full Property Management</h3><p class="service-text">We manage your investment property end-to-end — tenant sourcing, collections, maintenance, and reporting.</p></div>
+      <div class="service-card reveal reveal-delay-3"><div class="service-num">04</div><h3 class="service-title">Commercial Leasing</h3><p class="service-text">Office spaces, retail units, and commercial suites in central business districts across Metro Manila.</p></div>
+      <div class="service-card reveal reveal-delay-4"><div class="service-num">05</div><h3 class="service-title">Relocation Assistance</h3><p class="service-text">Comprehensive relocation packages for expats including airport pickup, settling-in support, and local orientation.</p></div>
+      <div class="service-card reveal reveal-delay-5"><div class="service-num">06</div><h3 class="service-title">Tenant Support</h3><p class="service-text">Dedicated account managers for every tenant. We're your local point of contact for anything you need.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="text-align:center" class="section-head reveal">
+      <span class="t-label section-label">Client Stories</span>
+      <h2 class="t-h2">Trusted by Residents<br>from Around the World</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Duphilco made our move from Singapore incredibly smooth. The apartment was exactly as described, and their team handled everything — from lease paperwork to utility setup. Exceptional service.</p><div class="testimonial-author"><div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=100&q=80" alt="James"></div><div><p class="testimonial-name">James Whitmore</p><p class="testimonial-role">Finance Director · Singapore</p></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-1"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">We've rented through Duphilco twice now. The BGC unit was immaculate, the lease terms were clear, and when we had a plumbing issue at 10pm, someone was at the door by 11. Unheard of.</p><div class="testimonial-author"><div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=100&q=80" alt="Akiko"></div><div><p class="testimonial-name">Akiko Tanaka</p><p class="testimonial-role">Consultant · Japan</p></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-2"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Duphilco found me a Salcedo Village penthouse that felt tailor-made. The whole process took less than a week. As someone relocating for a senior position, this exceeded every expectation.</p><div class="testimonial-author"><div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=100&q=80" alt="David"></div><div><p class="testimonial-name">David Okonkwo</p><p class="testimonial-role">Regional Director · Nigeria</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner reveal">
+    <span class="t-label" style="color:var(--c-gold);display:block;margin-bottom:1rem">Ready to Find Your Home?</span>
+    <h2 class="t-h2" style="color:#fff">Your Perfect Manila Home<br><em>Is Waiting for You</em></h2>
+    <p style="color:rgba(255,255,255,0.6);margin-top:1rem;max-width:480px;margin-left:auto;margin-right:auto">Browse our curated listings or speak directly with a property specialist who understands what expats truly need.</p>
+    <div class="cta-band-btns">
+      <a class="btn btn-primary btn-lg" data-nav="properties">Browse Properties</a>
+      <a class="btn btn-outline btn-lg" data-nav="contact">Talk to an Agent</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-home -->
+
+<!-- ══════════════════ PAGE: PROPERTIES ══════════════════ -->
+<div class="page" id="page-properties">
+
+<section class="page-header">
+  <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1600&q=80')"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content container">
+    <div class="breadcrumb"><a data-nav="home">Home</a><span class="sep"> / </span><span>Properties</span></div>
+    <h1 class="t-h1">All Properties</h1>
+    <p>Browse our curated portfolio of premium rentals across Metro Manila</p>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <div class="container filter-inner">
+    <div class="filter-pills">
+      <button class="filter-pill active" data-loc="all">All Areas</button>
+      <button class="filter-pill" data-loc="makati">Makati</button>
+      <button class="filter-pill" data-loc="bgc">BGC</button>
+    </div>
+    <div class="filter-selects">
+      <select class="filter-select" id="filterType">
+        <option value="all">All Types</option>
+        <option value="studio">Studio</option>
+        <option value="1br">1 Bedroom</option>
+        <option value="2br">2 Bedroom</option>
+        <option value="3br">3 Bedroom</option>
+      </select>
+      <select class="filter-select" id="filterPrice">
+        <option value="all">All Prices</option>
+        <option value="under50">Under ₱50K</option>
+        <option value="50to100">₱50K – ₱100K</option>
+        <option value="100to200">₱100K – ₱200K</option>
+      </select>
+    </div>
+    <span class="filter-count" id="propCount">6 properties found</span>
+  </div>
+</div>
+
+<section class="section" style="padding-top:4rem">
+  <div class="container">
+    <div class="all-props-grid">
+      <div class="prop-card reveal" data-location="bgc" data-type="2br" data-price="90000"><div class="prop-img"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80" alt="BGC 2BR"><span class="prop-badge prop-badge-avail">Available</span></div><div class="prop-body"><p class="prop-location">BGC, Taguig</p><h3 class="prop-name">The Residences at BGC — 2BR</h3><div class="prop-specs"><span class="prop-spec">⚏ 2 Beds</span><span class="prop-spec">⚗ 2 Baths</span><span class="prop-spec">⬡ 78 sqm</span></div><div class="prop-footer"><span class="prop-price">₱90,000 <span>/mo</span></span><span class="prop-link" style="cursor:pointer">Details →</span></div></div></div>
+      <div class="prop-card reveal reveal-delay-1" data-location="makati" data-type="studio" data-price="55000"><div class="prop-img"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80" alt="Salcedo Studio"><span class="prop-badge prop-badge-avail">Available</span></div><div class="prop-body"><p class="prop-location">Salcedo Village, Makati</p><h3 class="prop-name">Salcedo Premier Studio</h3><div class="prop-specs"><span class="prop-spec">⚏ Studio</span><span class="prop-spec">⚗ 1 Bath</span><span class="prop-spec">⬡ 42 sqm</span></div><div class="prop-footer"><span class="prop-price">₱55,000 <span>/mo</span></span><span class="prop-link" style="cursor:pointer">Details →</span></div></div></div>
+      <div class="prop-card reveal reveal-delay-2" data-location="makati" data-type="3br" data-price="160000"><div class="prop-img"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80" alt="Property interior"><span class="prop-badge prop-badge-avail">Available</span></div><div class="prop-body"><p class="prop-location">Urdaneta Village, Makati</p><h3 class="prop-name">Urdaneta Executive 3-Bedroom</h3><div class="prop-specs"><span class="prop-spec">⚏ 3 Beds</span><span class="prop-spec">⚗ 3 Baths</span><span class="prop-spec">⬡ 145 sqm</span></div><div class="prop-footer"><span class="prop-price">₱160,000 <span>/mo</span></span><span class="prop-link" style="cursor:pointer">Details →</span></div></div></div>
+      <div class="prop-card reveal" data-location="bgc" data-type="1br" data-price="75000"><div class="prop-img"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80" alt="Property interior"><span class="prop-badge prop-badge-avail">Available</span></div><div class="prop-body"><p class="prop-location">BGC, Taguig</p><h3 class="prop-name">Forbeswood Heights 1BR</h3><div class="prop-specs"><span class="prop-spec">⚏ 1 Bed</span><span class="prop-spec">⚗ 1 Bath</span><span class="prop-spec">⬡ 56 sqm</span></div><div class="prop-footer"><span class="prop-price">₱75,000 <span>/mo</span></span><span class="prop-link" style="cursor:pointer">Details →</span></div></div></div>
+      
+      <div class="prop-card reveal reveal-delay-2" data-location="makati" data-type="3br" data-price="120000"><div class="prop-img"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=700&q=80" alt="Property interior"><span class="prop-badge prop-badge-avail">Available</span></div><div class="prop-body"><p class="prop-location">Legazpi Village, Makati</p><h3 class="prop-name">Legazpi Park View 3BR</h3><div class="prop-specs"><span class="prop-spec">⚏ 3 Beds</span><span class="prop-spec">⚗ 2 Baths</span><span class="prop-spec">⬡ 120 sqm</span></div><div class="prop-footer"><span class="prop-price">₱120,000 <span>/mo</span></span><span class="prop-link" style="cursor:pointer">Details →</span></div></div></div>
+      
+      <div class="prop-card reveal reveal-delay-1" data-location="bgc" data-type="studio" data-price="42000"><div class="prop-img"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80" alt="BGC Studio"><span class="prop-badge prop-badge-avail">Available</span></div><div class="prop-body"><p class="prop-location">BGC, Taguig</p><h3 class="prop-name">BGC Garden Villas Studio</h3><div class="prop-specs"><span class="prop-spec">⚏ Studio</span><span class="prop-spec">⚗ 1 Bath</span><span class="prop-spec">⬡ 38 sqm</span></div><div class="prop-footer"><span class="prop-price">₱42,000 <span>/mo</span></span><span class="prop-link" style="cursor:pointer">Details →</span></div></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner reveal">
+    <span class="t-label" style="color:var(--c-gold);display:block;margin-bottom:1rem">Can't Find What You Need?</span>
+    <h2 class="t-h2" style="color:#fff">Let Us Find Your<br><em>Perfect Match</em></h2>
+    <p style="color:rgba(255,255,255,0.6);margin-top:1rem;max-width:440px;margin-left:auto;margin-right:auto">Our agents have access to unlisted properties and off-market units. Tell us what you need.</p>
+    <div class="cta-band-btns">
+      <a class="btn btn-primary btn-lg" data-modal="booking">Book a Consultation</a>
+      <a class="btn btn-outline btn-lg" data-nav="contact">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-properties -->
+
+<!-- ══════════════════ PAGE: SERVICES ══════════════════ -->
+<div class="page" id="page-services">
+
+<section class="page-header">
+  <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600&q=80')"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content container">
+    <div class="breadcrumb"><a data-nav="home">Home</a><span class="sep"> / </span><span>Services</span></div>
+    <h1 class="t-h1">Our Services</h1>
+    <p>Comprehensive real estate solutions from search to settlement</p>
+  </div>
+</section>
+
+<section class="services-intro">
+  <div class="container services-intro-grid reveal">
+    <div><span class="t-label section-label">What We Do</span><h2 class="t-h2">Everything You Need,<br><em>Under One Roof</em></h2></div>
+    <div><p style="color:var(--c-mid);font-size:1.05rem;line-height:1.85">From finding your first apartment in Manila to managing an entire residential portfolio, Duphilco offers the full range of real estate services — delivered with the expertise and care that only 15 years of experience can provide.</p><a class="btn btn-primary" data-nav="contact" style="margin-top:1.5rem;display:inline-flex">Discuss Your Needs</a></div>
+  </div>
+</section>
+
+<section class="service-block">
+  <div class="container service-block-grid reveal">
+    <div class="service-block-img-wrap"><img class="service-block-img" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80" alt="Condo Rentals"><div class="service-block-num">01</div></div>
+    <div class="service-block-content"><span class="t-label section-label">Premium Living</span><h2 class="t-h2" style="margin-bottom:1.2rem">Apartment &amp;<br>Condo Rentals</h2><p>Discover a curated selection of premium condominiums across Makati CBD, BGC, Rockwell, and Salcedo Village. Every unit is personally inspected to meet our quality standards.</p><ul class="service-features"><li>Studio to 4-bedroom units available</li><li>Fully furnished and semi-furnished options</li><li>Short-term and long-term leases</li><li>Pet-friendly properties available</li><li>Direct owner listings — no double brokerage</li></ul><a class="btn btn-outline-dark" data-nav="properties" style="margin-top:2rem;display:inline-flex">View Available Units</a></div>
+  </div>
+</section>
+
+<section class="service-block service-block-alt">
+  <div class="container service-block-grid reveal">
+    <div class="service-block-content"><span class="t-label section-label">Exclusive Residences</span><h2 class="t-h2" style="margin-bottom:1.2rem">House &amp; Lot<br><em>Leasing</em></h2><p>For families and executives seeking more space and privacy, our house and lot portfolio includes townhouses and gated community residences in Forbes Park, Dasmarinas Village, and McKinley Hill.</p><ul class="service-features"><li>Gated villages and secure compounds</li><li>Private pool and garden options</li><li>3 to 6-bedroom configurations</li><li>Dedicated parking (2–4 car garages)</li><li>Expat-preferred neighborhoods</li></ul><a class="btn btn-outline-dark" data-modal="booking" style="margin-top:2rem;display:inline-flex">Inquire About Houses</a></div>
+    <div class="service-block-img-wrap"><img class="service-block-img" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80" alt="House and Lot"><div class="service-block-num">02</div></div>
+  </div>
+</section>
+
+<section class="service-block">
+  <div class="container service-block-grid reveal">
+    <div class="service-block-img-wrap"><img class="service-block-img" src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80" alt="Property Management"><div class="service-block-num">03</div></div>
+    <div class="service-block-content"><span class="t-label section-label">For Property Owners</span><h2 class="t-h2" style="margin-bottom:1.2rem">Full-Service Property<br><em>Management</em></h2><p>Own a property in Metro Manila but based abroad? Let Duphilco handle everything — from tenant screening and lease management to maintenance coordination and monthly reporting.</p><ul class="service-features"><li>Professional tenant screening &amp; placement</li><li>Rent collection and financial reporting</li><li>Preventive maintenance scheduling</li><li>24/7 emergency response</li><li>Move-in / move-out inspections</li></ul><a class="btn btn-outline-dark" data-nav="contact" style="margin-top:2rem;display:inline-flex">Property Owner Inquiry</a></div>
+  </div>
+</section>
+
+<section class="process-section">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center">
+      <span class="t-label" style="color:var(--c-gold);display:block;margin-bottom:0.8rem">How It Works</span>
+      <h2 class="t-h2" style="color:#fff">Our Simple <em>4-Step</em> Process</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal"><div class="process-step-num">01</div><div class="process-icon">◈</div><h3 class="process-title">Consultation</h3><p class="process-desc">We start with a call to understand your budget, location preference, unit size, and move-in timeline.</p></div>
+      <div class="process-step reveal reveal-delay-1"><div class="process-step-num">02</div><div class="process-icon">◉</div><h3 class="process-title">Property Matching</h3><p class="process-desc">Our agents curate a shortlist of properties that match your exact criteria — no generic listings, no wasted viewings.</p></div>
+      <div class="process-step reveal reveal-delay-2"><div class="process-step-num">03</div><div class="process-icon">◎</div><h3 class="process-title">Viewing &amp; Selection</h3><p class="process-desc">Schedule private viewings at your convenience. We accompany you and provide honest assessments at every unit.</p></div>
+      <div class="process-step reveal reveal-delay-3"><div class="process-step-num">04</div><div class="process-icon">✦</div><h3 class="process-title">Move In</h3><p class="process-desc">We handle the paperwork, deposits, and key handover. Our team stays available for any needs after move-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container faq-inner">
+    <div class="faq-head reveal">
+      <span class="t-label section-label">Common Questions</span>
+      <h2 class="t-h2">Frequently Asked<br><em>Questions</em></h2>
+      <p style="color:var(--c-mid);margin-top:1rem;max-width:300px;font-size:0.9rem">Everything you need to know before renting in Metro Manila.</p>
+      <a class="btn btn-outline-dark" data-nav="contact" style="margin-top:2rem;display:inline-flex">Ask Us Anything</a>
+    </div>
+    <div class="faq-list reveal reveal-delay-1">
+      <div class="faq-item"><button class="faq-question">Can foreigners rent property in the Philippines?<span class="faq-arrow">↓</span></button><div class="faq-answer"><p>Yes. Foreign nationals can legally rent residential and commercial properties in the Philippines. You will typically need a valid passport and proof of employment or visa. Duphilco is experienced in assisting expats and can guide you through the documentation requirements.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What are the standard lease terms?<span class="faq-arrow">↓</span></button><div class="faq-answer"><p>Most residential leases in Metro Manila run for 12 months minimum, though 6-month arrangements are sometimes available. Standard terms include 2 months security deposit and 1 month advance rent. Short-term furnished rentals (1–3 months) are also available in select properties.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Is the finder's fee charged to the tenant?<span class="faq-arrow">↓</span></button><div class="faq-answer"><p>In most cases, the brokerage fee is paid by the property owner, not the tenant. We will always be transparent about any fees before you commit. Our priority is helping you find the right property without hidden charges.</p></div></div>
+      <div class="faq-item"><button class="faq-question">How quickly can I move in after signing?<span class="faq-arrow">↓</span></button><div class="faq-answer"><p>For most properties in our portfolio, move-in can happen within 3–7 business days after contract signing and deposit payment. Furnished units are typically available immediately.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What does property management include?<span class="faq-arrow">↓</span></button><div class="faq-answer"><p>Our full management package covers tenant sourcing and screening, lease preparation, rent collection, monthly owner reports, routine inspections, and 24-hour maintenance coordination. We act as a single point of contact between you and your tenants.</p></div></div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-services -->
+
+<!-- ══════════════════ PAGE: ABOUT ══════════════════ -->
+<div class="page" id="page-about">
+
+<section class="page-header">
+  <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80')"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content container">
+    <div class="breadcrumb"><a data-nav="home">Home</a><span class="sep"> / </span><span>About</span></div>
+    <h1 class="t-h1">Our Story</h1>
+    <p>Fifteen years of trust, expertise, and premium service</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="story-grid reveal">
+      <div class="story-image-wrap">
+        <img class="story-img" src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80" alt="Duphilco Office">
+        <div class="story-badge"><span class="story-badge-num">15+</span><span class="story-badge-text">Years of<br>Excellence</span></div>
+      </div>
+      <div class="story-content">
+        <span class="t-label section-label">Who We Are</span>
+        <h2 class="t-h2" style="margin:0.8rem 0 1.2rem">Built on Trust.<br>Driven by <em>Excellence.</em></h2>
+        <p class="story-lead">Duphilco Real Estate Inc. was founded in 2009 with one clear purpose: to provide expats, diplomats, and professionals with a reliable home in one of Asia's most dynamic cities.</p>
+        <p>What began as a small portfolio of managed condominiums in Makati has grown into a full-service real estate firm trusted by residents from over 30 countries.</p>
+        <p>Today, we manage over 250 premium units across Makati, BGC, Taguig, and Mandaluyong, and continue to expand with carefully selected properties that meet our rigorous quality standards.</p>
+        <div class="story-checkmarks">
+          <div class="story-check"><div class="story-check-icon">✓</div><span>Licensed real estate brokerage since 2009</span></div>
+          <div class="story-check"><div class="story-check-icon">✓</div><span>Accredited by HLURB / DHSUD Philippines</span></div>
+          <div class="story-check"><div class="story-check-icon">✓</div><span>Trusted by embassies and multinational firms</span></div>
+          <div class="story-check"><div class="story-check-icon">✓</div><span>24-hour tenant support and maintenance</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="numbers-band">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="number-item reveal"><div class="number-val">250+</div><div class="number-label">Premium Units</div></div>
+      <div class="number-item reveal reveal-delay-1"><div class="number-val">30+</div><div class="number-label">Nationalities Served</div></div>
+      <div class="number-item reveal reveal-delay-2"><div class="number-val">15+</div><div class="number-label">Years in Business</div></div>
+      <div class="number-item reveal reveal-delay-3"><div class="number-val">98%</div><div class="number-label">Client Satisfaction</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="mvv-section">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center">
+      <span class="t-label section-label">Our Purpose</span>
+      <h2 class="t-h2">Mission, Vision &amp; Values</h2>
+    </div>
+    <div class="mvv-grid">
+      <div class="mvv-card reveal"><div class="mvv-icon">◈</div><h3 class="mvv-title">Mission</h3><p>To deliver secure, high-quality living spaces for expats and professionals in Metro Manila — supported by responsive service, transparent processes, and genuine care for our tenants' well-being.</p></div>
+      <div class="mvv-card reveal reveal-delay-1"><div class="mvv-icon">◉</div><h3 class="mvv-title">Vision</h3><p>To be the most trusted real estate partner for international residents in the Philippines — setting the standard for premium property management, tenant experience, and ethical business practice.</p></div>
+      <div class="mvv-card reveal reveal-delay-2"><div class="mvv-icon">◎</div><h3 class="mvv-title">Values</h3><ul class="mvv-list"><li>Integrity in every transaction</li><li>Excellence in property standards</li><li>Responsiveness to tenant needs</li><li>Respect for cultural diversity</li><li>Long-term relationships over short-term gains</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center">
+      <span class="t-label section-label">The People Behind Duphilco</span>
+      <h2 class="t-h2">Meet Our <em>Team</em></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="team-photo-wrap"><div class="team-avatar"><div class="team-initials">RV</div></div><div class="team-photo-overlay"></div></div><div class="team-info"><h3 class="team-name">Roberto Villanueva</h3><div class="team-role">Founder &amp; CEO</div><p class="team-bio">With 20+ years in Manila's property market, Roberto built Duphilco on the belief that international tenants deserve quality and service equal to property owners.</p></div></div>
+      <div class="team-card reveal reveal-delay-1"><div class="team-photo-wrap"><div class="team-avatar"><div class="team-initials">MS</div></div><div class="team-photo-overlay"></div></div><div class="team-info"><h3 class="team-name">Maria Santos</h3><div class="team-role">Head of Leasing</div><p class="team-bio">Maria has personally assisted over 500 expat families in finding their perfect home. She speaks English, Filipino, and conversational Japanese.</p></div></div>
+      <div class="team-card reveal reveal-delay-2"><div class="team-photo-wrap"><div class="team-avatar"><div class="team-initials">MR</div></div><div class="team-photo-overlay"></div></div><div class="team-info"><h3 class="team-name">Marco Reyes</h3><div class="team-role">Senior Property Agent</div><p class="team-bio">A specialist in BGC and Makati CBD, Marco brings deep market knowledge and a reputation for finding the right property for each client's specific needs.</p></div></div>
+      <div class="team-card reveal reveal-delay-3"><div class="team-photo-wrap"><div class="team-avatar"><div class="team-initials">CL</div></div><div class="team-photo-overlay"></div></div><div class="team-info"><h3 class="team-name">Christine Lim</h3><div class="team-role">Property Manager</div><p class="team-bio">Christine oversees our managed portfolio, coordinating maintenance, tenant support, and property inspections to ensure every unit remains at peak condition.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner reveal">
+    <span class="t-label" style="color:var(--c-gold);display:block;margin-bottom:1rem">Start Your Journey</span>
+    <h2 class="t-h2" style="color:#fff">Ready to Find Your<br><em>Perfect Home?</em></h2>
+    <p style="color:rgba(255,255,255,0.6);margin-top:1rem;max-width:460px;margin-left:auto;margin-right:auto">Let our team match you with a property that fits your lifestyle, budget, and location needs.</p>
+    <div class="cta-band-btns">
+      <a class="btn btn-primary btn-lg" data-nav="properties">Browse Properties</a>
+      <a class="btn btn-outline btn-lg" data-nav="contact">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-about -->
+
+<!-- ══════════════════ PAGE: CONTACT ══════════════════ -->
+<div class="page" id="page-contact">
+
+<section class="page-header">
+  <div class="page-header-bg" style="background-image:url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80')"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content container">
+    <div class="breadcrumb"><a data-nav="home">Home</a><span class="sep"> / </span><span>Contact</span></div>
+    <h1 class="t-h1">Get in Touch</h1>
+    <p>We're here Monday to Saturday — and on WhatsApp 7 days a week</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <span class="t-label section-label">Send a Message</span>
+      <h2 class="t-h2" style="margin-bottom:2rem">Tell Us How<br>We Can <em>Help</em></h2>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-field"><label class="form-label">First Name</label><input class="form-input" type="text" placeholder="John" required></div>
+          <div class="form-field"><label class="form-label">Last Name</label><input class="form-input" type="text" placeholder="Smith" required></div>
+        </div>
+        <div class="form-field"><label class="form-label">Email Address</label><input class="form-input" type="email" placeholder="john@example.com" required></div>
+        <div class="form-field"><label class="form-label">Phone / WhatsApp</label><input class="form-input" type="tel" placeholder="+63 xxx xxx xxxx"></div>
+        <div class="form-field"><label class="form-label">I'm Interested In</label><select class="form-input"><option value="">Select a topic</option><option>Renting a Condo / Apartment</option><option>Renting a House &amp; Lot</option><option>Property Management Services</option><option>Commercial Leasing</option><option>General Inquiry</option></select></div>
+        <div class="form-field"><label class="form-label">Message</label><textarea class="form-input form-textarea" placeholder="Tell us about your requirements — preferred location, budget, move-in timeline, etc." required></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg contact-submit">Send Message</button>
+      </form>
+      <div class="form-success" id="contactSuccess">
+        <div class="form-success-icon">✓</div>
+        <h3>Message Sent</h3>
+        <p>Thank you for reaching out. Our team will respond within 24 business hours.</p>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-1">
+      <div class="contact-info-inner">
+        <div class="contact-info-section">
+          <span class="t-label" style="color:var(--c-gold);display:block;margin-bottom:0.5rem">Our Office</span>
+          <h3 class="contact-info-title">Visit Us in Makati</h3>
+          <address class="contact-address">108 Benavidez Street<br>Legaspi Village, Makati City<br>Metro Manila, Philippines</address>
+        </div>
+        <div class="contact-info-section">
+          <div class="contact-info-items">
+            <a href="tel:+639274079861" class="contact-info-item"><div class="contact-info-icon">✆</div><div><div class="contact-info-meta">Phone / WhatsApp</div><div class="contact-info-val">+63 927 407 9861</div></div></a>
+            <a href="mailto:inquiry@duphilco.com" class="contact-info-item"><div class="contact-info-icon">✉</div><div><div class="contact-info-meta">Email</div><div class="contact-info-val">inquiry@duphilco.com</div></div></a>
+          </div>
+        </div>
+        <div class="contact-info-section">
+          <span class="t-label" style="color:var(--c-gold);display:block;margin-bottom:1rem">Office Hours</span>
+          <div class="hours-grid">
+            <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">9:00 AM – 3:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">By Appointment</span></div>
+            <div class="hours-row hours-highlight"><span class="hours-day">WhatsApp</span><span class="hours-time">7 Days / 8AM–9PM</span></div>
+          </div>
+        </div>
+        <div class="contact-cta-row">
+          <a href="https://wa.me/639274079861" class="contact-wa-btn" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+          <a href="mailto:inquiry@duphilco.com" class="contact-email-btn">✉ Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="map-label">
+  <div class="container map-label-inner">
+    <span>⌖</span>
+    <span>108 Benavidez St, Legaspi Village, Makati City</span>
+    <a href="https://maps.google.com/?q=108+Benavidez+Street+Legaspi+Village+Makati+City" target="_blank" rel="noopener" class="map-directions-btn">Get Directions ↗</a>
+  </div>
+</div>
+<div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.4789940744296!2d121.01592991533788!3d14.555143689810394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90d0cb4e0e1%3A0x6ea9db8a4a9d6a25!2sLegaspi+Village%2C+Makati%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" width="100%" height="480" style="border:0;display:block;filter:saturate(0) contrast(1.1)" allowfullscreen="" loading="lazy" title="Duphilco office location"></iframe>
+</div>
+
+</div><!-- /page-contact -->
+
+<!-- ══════════════════ SHARED ELEMENTS ══════════════════ -->
+<!-- FOOTER (shared, shown on all pages) -->
+<footer class="footer" id="siteFooter">
+  <div class="footer-inner container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">Duphilco</p>
+        <p class="footer-brand-tag">Real Estate Inc.</p>
+        <p class="footer-brand-text">Premium rental homes for expats and professionals in Metro Manila. Trusted since 2009.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigation</p>
+        <ul class="footer-links">
+          <li><a data-nav="home">Home</a></li>
+          <li><a data-nav="properties">Properties</a></li>
+          <li><a data-nav="services">Services</a></li>
+          <li><a data-nav="about">About Us</a></li>
+          <li><a data-nav="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Locations</p>
+        <ul class="footer-links">
+          <li><a data-nav="properties">Makati City</a></li>
+          <li><a data-nav="properties">Bonifacio Global City</a></li>
+          <li><a data-nav="properties">Taguig City</a></li>
+          <li><a data-nav="properties">Mandaluyong</a></li>
+          <li><a data-nav="properties">Pasig City</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact Us</p>
+        <div class="footer-contact-item"><span class="footer-contact-icon">⌖</span><span>108 Benavidez Street, Legaspi Village, Makati City</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✆</span><a href="tel:+639274079861">+63 927 407 9861</a></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><a href="mailto:inquiry@duphilco.com">inquiry@duphilco.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Duphilco Real Estate Inc. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">in</a>
+        <a href="#" aria-label="LinkedIn">li</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <h2 class="modal-title">Book a Viewing</h2>
+      <p class="modal-sub">Our team will confirm within 24 hours</p>
+    </div>
+    <form id="bookingForm">
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-field"><label class="form-label">First Name</label><input class="form-input" type="text" placeholder="John" required></div>
+          <div class="form-field"><label class="form-label">Last Name</label><input class="form-input" type="text" placeholder="Smith" required></div>
+        </div>
+        <div class="form-field"><label class="form-label">Email Address</label><input class="form-input" type="email" placeholder="john@example.com" required></div>
+        <div class="form-field"><label class="form-label">Phone / WhatsApp</label><input class="form-input" type="tel" placeholder="+63 xxx xxx xxxx" required></div>
+        <div class="form-field"><label class="form-label">Preferred Location</label><select class="form-input"><option value="">Select a location</option><option>Makati City</option><option>BGC / Taguig</option><option>Mandaluyong</option><option>Pasig City</option></select></div>
+        <div class="form-field"><label class="form-label">Message (Optional)</label><textarea class="form-input" placeholder="Tell us about your ideal property..."></textarea></div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-lg">Send Viewing Request</button>
+      </div>
+    </form>
+    <div class="form-success" id="bookingSuccess">
+      <div class="form-success-icon">✓</div>
+      <h3>Request Received</h3>
+      <p>Thank you! Our team will reach out within 24 hours to confirm your viewing schedule.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ── PAGE ROUTER ──────────────────────────────────────────
+  const pages = document.querySelectorAll('.page');
+  const navLinks = document.querySelectorAll('[data-nav]');
+  const nav = document.getElementById('mainNav');
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  let currentPage = 'home';
+
+  function goTo(page) {
+    if (!document.getElementById('page-' + page)) return;
+    pages.forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    currentPage = page;
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Update nav style
+    if (page === 'home') {
+      nav.classList.remove('scrolled');
+      nav.classList.add('transparent');
+    } else {
+      nav.classList.remove('transparent');
+      nav.classList.add('scrolled');
+    }
+
+    // Update active nav link
+    document.querySelectorAll('.nav-links a[data-nav]').forEach(a => {
+      a.classList.toggle('active', a.dataset.nav === page);
+    });
+
+    // Re-init reveals for new page
+    initReveals();
+
+    // Re-init filters if properties
+    if (page === 'properties') initFilters();
+  }
+
+  navLinks.forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      const page = el.dataset.nav;
+      if (page) {
+        goTo(page);
+        // Close mobile menu
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // ── NAV SCROLL (home page only) ──────────────────────────
+  window.addEventListener('scroll', () => {
+    if (currentPage === 'home') {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+      nav.classList.toggle('transparent', window.scrollY <= 60);
+    }
+  }, { passive: true });
+
+  // ── MOBILE MENU ──────────────────────────────────────────
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  });
+
+  // ── SCROLL REVEAL ────────────────────────────────────────
+  let observer;
+  function initReveals() {
+    if (observer) observer.disconnect();
+    const reveals = document.querySelectorAll('.page.active .reveal:not(.visible)');
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  }
+  initReveals();
+
+  // ── MODAL ────────────────────────────────────────────────
+  const modalOverlay = document.getElementById('modalOverlay');
+  const openModal = () => { modalOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const closeModalFn = () => { modalOverlay.classList.remove('open'); document.body.style.overflow = ''; };
+  document.querySelectorAll('[data-modal="booking"]').forEach(btn => btn.addEventListener('click', openModal));
+  document.getElementById('modalClose').addEventListener('click', closeModalFn);
+  modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModalFn(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalFn(); });
+
+  // ── BOOKING FORM ─────────────────────────────────────────
+  document.getElementById('bookingForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    setTimeout(() => {
+      e.target.style.display = 'none';
+      document.querySelector('.modal-footer').style.display = 'none';
+      document.getElementById('bookingSuccess').classList.add('show');
+    }, 1200);
+  });
+
+  // ── CONTACT FORM ─────────────────────────────────────────
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    setTimeout(() => {
+      e.target.style.display = 'none';
+      document.getElementById('contactSuccess').classList.add('show');
+    }, 1200);
+  });
+
+  // ── PROPERTY FILTERS ─────────────────────────────────────
+  function initFilters() {
+    const pills = document.querySelectorAll('.filter-pill');
+    const typeSelect = document.getElementById('filterType');
+    const priceSelect = document.getElementById('filterPrice');
+    const cards = document.querySelectorAll('.prop-card[data-location]');
+    const countEl = document.getElementById('propCount');
+
+    const apply = () => {
+      const loc = document.querySelector('.filter-pill.active')?.dataset.loc || 'all';
+      const type = typeSelect?.value || 'all';
+      const price = priceSelect?.value || 'all';
+      let n = 0;
+      cards.forEach(card => {
+        const cLoc = card.dataset.location;
+        const cType = card.dataset.type;
+        const cPrice = parseInt(card.dataset.price || 0);
+        const lm = loc === 'all' || cLoc === loc;
+        const tm = type === 'all' || cType === type;
+        let pm = true;
+        if (price === 'under50') pm = cPrice < 50000;
+        else if (price === '50to100') pm = cPrice >= 50000 && cPrice <= 100000;
+        else if (price === '100to200') pm = cPrice > 100000 && cPrice <= 200000;
+        else if (price === 'over200') pm = cPrice > 200000;
+        const show = lm && tm && pm;
+        card.dataset.hidden = show ? 'false' : 'true';
+        if (show) n++;
+      });
+      if (countEl) countEl.textContent = `${n} propert${n === 1 ? 'y' : 'ies'} found`;
+    };
+
+    pills.forEach(pill => pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      apply();
+    }));
+    typeSelect?.addEventListener('change', apply);
+    priceSelect?.addEventListener('change', apply);
+    apply();
+  }
+
+  // ── FAQ ACCORDION ────────────────────────────────────────
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.faq-question');
+    if (!btn) return;
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-question.open').forEach(q => {
+      q.classList.remove('open');
+      q.closest('.faq-item').querySelector('.faq-answer').classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
